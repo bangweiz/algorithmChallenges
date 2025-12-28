@@ -1,13 +1,5 @@
 function containsDuplicate(nums: number[]): boolean {
-	const map = new Map<number, boolean>();
-
-	for (const num of nums) {
-		if (map.has(num)) {
-			return true;
-		}
-		map.set(num, true);
-	}
-	return false;
+	return new Set(nums).size < nums.length;
 }
 
 export default containsDuplicate;
